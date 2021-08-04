@@ -8,18 +8,18 @@ hbs.registerPartials(__dirname + '/views/partials');
 
 
 app.set('view engine', 'hbs');
-app.use(express.static('public'));
+app.use(express.static('build'));
 
-app.get('/', (req, res) => {
+/* app.get('/', (req, res) => {
   res.render('home',{
     titulo: "Curso de NodeJS",
     nombre: "Eino Linna"
 
   });
 
-})
+}) */
 
-app.get('/elements', (req, res) => {
+/* app.get('/elements', (req, res) => {
   res.render('elements',{
     titulo: "Curso de NodeJS",
     nombre: "Eino Linna"
@@ -27,10 +27,10 @@ app.get('/elements', (req, res) => {
   });
 
 })
+ */
 
 
-
-app.get('/generic', (req, res) => {
+/* app.get('/generic', (req, res) => {
   res.render('generic',{
 
     titulo: "Curso de NodeJS",
@@ -39,7 +39,7 @@ app.get('/generic', (req, res) => {
   });
 
 })
-
+ */
 app.get('*', (req, res) => {
   res.sendFile('404 Not Found | Error');
 
